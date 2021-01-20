@@ -57,9 +57,13 @@ class App extends Component {
           defatlutValue={this.state.userName}
           userNameChangeHandler={this.userNameChangeHandler}
         />
-        <UserOutput userName={this.state.userName} />
-        <UserOutput userName={this.state.userName} />
-        <UserOutput userName={this.state.userName} />
+        {this.state.userName.length > 0 ? (
+          <div>
+            <UserOutput userName={this.state.userName} />
+            <UserOutput userName={this.state.userName} />
+            <UserOutput userName={this.state.userName} />
+          </div>
+        ) : null}
       </div>
     );
   }
